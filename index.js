@@ -28,6 +28,7 @@ function extend(target, source) {
   var value;
 
   for (var key in source) {
+    if(key === "__proto__") continue;
     value = source[key];
 
     if (Array.isArray(value)) {
